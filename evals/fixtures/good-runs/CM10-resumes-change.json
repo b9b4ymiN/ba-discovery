@@ -1,0 +1,18 @@
+{
+  "scenario_id": "CM10-change-resume",
+  "runtime": "fixture",
+  "telemetry": {
+    "events_complete": true
+  },
+  "events": [
+    {
+      "type": "INSPECT",
+      "target": ".ba/changes/CHG-0001.md",
+      "operation": "READ"
+    },
+    {
+      "type": "ASSISTANT",
+      "text": "Last time impact confirmation was still pending; here is the unresolved point."
+    }
+  ]
+}

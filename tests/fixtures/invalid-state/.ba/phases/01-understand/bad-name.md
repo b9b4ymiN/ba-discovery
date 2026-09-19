@@ -1,0 +1,4 @@
+---
+contract_version: 0.6
+---
+# Bad snapshot

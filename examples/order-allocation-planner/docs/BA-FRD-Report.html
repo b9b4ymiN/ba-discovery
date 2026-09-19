@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Order Allocation Planner — BA Professional FRD Report</title>
+<style>
+:root{--ink:#17202a;--muted:#5d6773;--line:#d9dee5;--paper:#fff;--soft:#f5f7f9;--accent:#243b53;--warn:#7a4b00;--danger:#7a1f1f;--max:980px}
+*{box-sizing:border-box}body{margin:0;background:#eef1f4;color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.58}.page{max-width:var(--max);margin:36px auto;background:var(--paper);padding:64px 72px;box-shadow:0 10px 32px rgba(0,0,0,.08)}header{border-bottom:3px solid var(--accent);padding-bottom:28px;margin-bottom:40px}h1{font-size:2.1rem;line-height:1.15;margin:.2rem 0 .6rem}h2{font-size:1.45rem;line-height:1.25;margin:3rem 0 1rem;border-bottom:1px solid var(--line);padding-bottom:.45rem}h3{font-size:1.1rem;margin:1.8rem 0 .7rem}p{margin:.6rem 0 1rem}.eyebrow{font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:700}.report-meta{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 20px;margin-top:20px;padding:14px 16px;background:var(--soft);border:1px solid var(--line);border-radius:8px}.summary-box,.plain-language,.risk,.open-item{padding:16px 18px;border-radius:8px;margin:16px 0}.summary-box{background:#f4f7fb;border-left:4px solid var(--accent)}.plain-language{background:#f8fafc;border:1px solid var(--line)}.plain-language::before{content:"In plain language";display:block;font-size:.76rem;text-transform:uppercase;letter-spacing:.06em;font-weight:700;color:var(--muted);margin-bottom:6px}.risk{background:#fff8ec;border-left:4px solid var(--warn)}.open-item{background:#fff2f2;border-left:4px solid var(--danger)}.flow{display:flex;gap:10px;align-items:stretch;flex-wrap:wrap;margin:16px 0}.flow>*{flex:1 1 150px;background:var(--soft);border:1px solid var(--line);border-radius:8px;padding:12px}.capability{border:1px solid var(--line);border-radius:10px;padding:18px;margin:18px 0}.traceability{font-size:.86rem;color:var(--muted);border-top:1px dashed var(--line);padding-top:10px;margin-top:14px}.rule-table,table{width:100%;border-collapse:collapse;margin:14px 0 20px}th,td{border:1px solid var(--line);padding:10px 12px;vertical-align:top;text-align:left}th{background:var(--soft)}code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.9em}.na{color:var(--muted);font-style:italic}section{scroll-margin-top:20px}ul,ol{padding-left:1.4rem}@media(max-width:760px){.page{margin:0;padding:34px 22px;box-shadow:none}.report-meta{grid-template-columns:1fr}.flow{display:block}.flow>*{margin-bottom:8px}}
+@media print{@page{margin:16mm}body{background:#fff}.page{max-width:none;margin:0;padding:0;box-shadow:none}header{break-after:avoid}h2,h3{break-after:avoid}.summary-box,.plain-language,.risk,.open-item,.capability,table{break-inside:avoid}a{color:inherit;text-decoration:none}}
+</style>
+</head>
+<body>
+<main class="page">
+<header>
+<div class="eyebrow">BA Professional FRD Report · BA-ELI5-FRD v1.0</div>
+<h1>Order Allocation Planner</h1>
+<p>Professional plain-language FRD for a synthetic allocation-planning example.</p>
+<div class="report-meta">
+<div><strong>Status:</strong> APPROVED EXAMPLE</div>
+<div><strong>Source baseline:</strong> .ba/phases/04-spec/R001.md</div>
+<div><strong>Prepared for:</strong> Business, planning, engineering</div>
+<div><strong>Prepared at:</strong> Example artifact</div>
+</div>
+<div class="summary-box">This project helps planners prioritize constrained orders consistently while preserving human authority.</div>
+</header>
+
+<section id="background" data-ba-section="1">
+<h2>1. Background</h2>
+<p>Today, constrained allocation depends on spreadsheets and personal judgment, making decisions difficult to explain consistently.</p>
+<div class="plain-language">When there is not enough material for every order, the system helps make the reasoning visible instead of leaving it only in a planner’s head.</div>
+</section>
+
+<section id="goal" data-ba-section="2">
+<h2>2. Goal</h2>
+<p>Provide a traceable recommendation that improves consistency without replacing planner judgment.</p>
+</section>
+
+<section id="what-we-will-do" data-ba-section="3">
+<h2>3. What We Will Do</h2>
+<p>Read approved order/material data, apply priority rules, explain the recommendation, and support review/override within policy.</p>
+</section>
+
+<section id="scope-boundaries" data-ba-section="4">
+<h2>4. Scope &amp; Boundaries</h2>
+<h3>4.1 In Scope</h3><ul><li>Prepare eligible orders</li><li>Recommend priority</li><li>Explain reasoning</li><li>Review and permitted override</li></ul>
+<h3>4.2 Out of Scope</h3><ul><li>Autonomous production release</li><li>Replacing ERP</li></ul>
+<h3>4.3 System / Process Boundary</h3><p>The planner workflow begins with ERP-sourced order/material data and ends with an approved allocation decision.</p>
+<h3>4.4 External Responsibilities</h3><p>ERP owns order/material truth; managers own confirmation of named exceptional overrides.</p>
+<h3>4.5 Non-Goals</h3><p>Removing planner authority is explicitly not a goal.</p>
+</section>
+
+<section id="current-future" data-ba-section="5">
+<h2>5. Current → Future</h2>
+<div class="flow"><div><strong>Current</strong><br>ERP + spreadsheet + personal judgment</div><div><strong>Future</strong><br>ERP → recommendation → planner decision</div></div>
+</section>
+
+<section id="system-logic" data-ba-section="6">
+<h2>6. Project / System Logic</h2>
+<div class="flow"><div>Eligible orders</div><div>Priority rules</div><div>Recommendation</div><div>Planner review</div></div>
+<div class="plain-language">The system proposes and explains; the planner normally decides. Certain exceptional overrides require manager confirmation.</div>
+</section>
+
+<section id="functional-requirements" data-ba-section="7">
+<h2>7. Functional Requirements</h2>
+<div class="capability"><h3>7.1 Prioritize constrained orders</h3><p><strong>Purpose:</strong> Make allocation priority consistent and explainable.</p><p><strong>When It Happens:</strong> Available material cannot satisfy every eligible order.</p><p><strong>How It Works:</strong> Evaluate approved rules, produce an ordered recommendation, show reasons, then wait for planner action.</p><p><strong>Business Rules:</strong> Policy-driven priority; exceptional overrides require manager confirmation.</p><p><strong>Example:</strong> Two orders compete for limited material; the recommendation explains which rule placed one ahead.</p><p><strong>Exceptions:</strong> Missing data or a policy conflict remains visible instead of being silently resolved.</p><p><strong>Expected Result:</strong> A reviewable proposed allocation.</p></div>
+<div class="traceability">REQ-0001 · REQ-0002 · DEC-0001 · DEC-0002</div>
+</section>
+
+<section id="business-rules" data-ba-section="8">
+<h2>8. Business Rules &amp; Decision Logic</h2>
+<table class="rule-table"><tr><th>Condition</th><th>Behavior</th><th>Authority</th></tr><tr><td>Material constrained</td><td>Recommend ranked allocation</td><td>Planner</td></tr><tr><td>Named exceptional override</td><td>Require confirmation</td><td>Manager</td></tr></table>
+</section>
+
+<section id="data-integrations" data-ba-section="9">
+<h2>9. Data &amp; Integrations</h2>
+<p>ERP is the source of truth for order and material availability. The BA example does not define a transport protocol.</p>
+</section>
+
+<section id="roles-permissions" data-ba-section="10">
+<h2>10. Roles, Responsibilities &amp; Permissions</h2>
+<p>Planner reviews normal recommendations; manager confirms policy-defined exceptional overrides.</p>
+</section>
+
+<section id="exceptions-edge-cases" data-ba-section="11">
+<h2>11. Exceptions &amp; Edge Cases</h2>
+<p>Invalid/missing source data and unresolved policy conflicts must remain explicit and block silent finalization.</p>
+</section>
+
+<section id="non-functional-requirements" data-ba-section="12">
+<h2>12. Non-Functional Requirements</h2>
+<p>No numeric performance target is invented in this example. The ~30-user statement remains an estimate, not a hard capacity requirement.</p>
+</section>
+
+<section id="acceptance-success" data-ba-section="13">
+<h2>13. Acceptance &amp; Success Criteria</h2>
+<p>The recommendation is reviewable, rules are explainable, planner authority is preserved, and exceptional overrides follow the approved confirmation rule.</p>
+</section>
+
+<section id="risks-assumptions-open-items" data-ba-section="14">
+<h2>14. Risks, Assumptions &amp; Open Items</h2>
+<div class="risk">Priority policy may change and requires a clear owner.</div>
+<p>~30 active planners is an unconfirmed estimate used only as contextual evidence.</p>
+<div class="open-item">No blocking open item in the synthetic approved scope.</div>
+</section>
+
+<section id="technical-reference-traceability" data-ba-section="15">
+<h2>15. Technical Reference &amp; Traceability</h2>
+<div class="traceability">REQ-0001, REQ-0002, CON-0001, DEC-0001, DEC-0002 · Final baseline R001.</div>
+</section>
+</main>
+</body>
+</html>

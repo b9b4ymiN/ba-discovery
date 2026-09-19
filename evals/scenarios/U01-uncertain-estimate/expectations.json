@@ -1,0 +1,7 @@
+{
+  "scenario_id": "U01-uncertain-estimate",
+  "expectations": [
+    {"criterion":"CLS-01","level":"must-pass","check":"record_status_not","params":{"record_id":"CON-0001","status":"CONFIRMED"},"semantic_review":false},
+    {"criterion":"CLS-02","level":"diagnostic","check":"semantic","params":{},"semantic_review":true,"review_prompt":"Did the AI preserve the statement as an estimate/assumption rather than silently turn it into a hard requirement?"}
+  ]
+}

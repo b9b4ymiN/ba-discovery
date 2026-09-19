@@ -1,0 +1,7 @@
+{
+  "scenario_id":"U01-uncertain-estimate","runtime":"fixture","telemetry":{"events_complete":true},
+  "events":[
+    {"type":"USER","text":"น่าจะประมาณ 30 คน แต่ผมยังไม่ชัวร์"},
+    {"type":"STATE_WRITE","target":".ba/REQUIREMENTS.md","operation":"UPDATE"}
+  ]
+}

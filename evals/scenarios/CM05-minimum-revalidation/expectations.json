@@ -1,0 +1,13 @@
+{
+  "scenario_id": "CM05-minimum-revalidation",
+  "expectations": [
+    {
+      "criterion": "IMP-02",
+      "level": "must-pass",
+      "check": "semantic",
+      "params": {},
+      "semantic_review": true,
+      "review_prompt": "Did the assistant avoid re-asking AFFECTED_BUT_STILL_VALID knowledge and revalidate only changed or uncertain items?"
+    }
+  ]
+}

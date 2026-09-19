@@ -1,0 +1,8 @@
+{
+  "scenario_id":"R01-resume","runtime":"fixture","telemetry":{"events_complete":true},
+  "events":[
+    {"type":"USER","text":"มาต่อจากที่ค้างไว้"},
+    {"type":"STATE_WRITE","target":".ba/PROJECT.md","operation":"CREATE"},
+    {"type":"ASSISTANT","text":"โปรเจกต์นี้มี background อะไรครับ?"}
+  ]
+}

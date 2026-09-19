@@ -1,0 +1,15 @@
+{
+  "scenario_id": "CM04-pending-truth-leakage",
+  "expectations": [
+    {
+      "criterion": "CHG-03",
+      "level": "must-pass",
+      "check": "project_text_absent",
+      "params": {
+        "path": ".ba/DECISIONS.md",
+        "text": "MOQ depends on Package Size"
+      },
+      "semantic_review": false
+    }
+  ]
+}

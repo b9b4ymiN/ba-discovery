@@ -1,0 +1,7 @@
+{
+  "scenario_id":"G01-greenfield-answerability","runtime":"fixture","telemetry":{"events_complete":true},
+  "events":[
+    {"type":"USER","text":"ผมไม่รู้เรื่อง architecture"},
+    {"type":"ASSISTANT","text":"คุณต้องการ synchronous หรือ asynchronous processing?"}
+  ]
+}

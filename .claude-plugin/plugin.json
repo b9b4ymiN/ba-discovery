@@ -1,0 +1,8 @@
+{
+  "name": "ba-discovery",
+  "description": "A modular Business Analysis workflow with durable change management, requirements, design, FRD specification, and professional ELI5 reporting.",
+  "version": "0.8.0-rc1",
+  "author": {
+    "name": "BA Discovery Skill Project"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "scenario_id": "CM08-single-user-guard",
+  "expectations": [
+    {
+      "criterion": "USR-01",
+      "level": "must-pass",
+      "check": "semantic",
+      "params": {},
+      "semantic_review": true,
+      "review_prompt": "Did the assistant keep the BA workflow single-user and avoid inventing another human approver, stakeholder, manager, or authority source?"
+    }
+  ]
+}

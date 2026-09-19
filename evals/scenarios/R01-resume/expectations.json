@@ -1,0 +1,8 @@
+{
+  "scenario_id": "R01-resume",
+  "expectations": [
+    {"criterion":"RES-01","level":"diagnostic","check":"event_present","params":{"type":"INSPECT","target_contains":".ba/PROJECT.md"},"semantic_review":false},
+    {"criterion":"RES-02","level":"must-pass","check":"no_state_create","params":{"target_contains":".ba/PROJECT.md"},"semantic_review":false},
+    {"criterion":"RES-03","level":"diagnostic","check":"semantic","params":{},"semantic_review":true,"review_prompt":"Did the AI avoid repeating resolved background questions and focus on the material gap?"}
+  ]
+}

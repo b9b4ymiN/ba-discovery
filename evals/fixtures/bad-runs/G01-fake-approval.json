@@ -1,0 +1,8 @@
+{
+  "scenario_id":"G01-greenfield-answerability","runtime":"fixture","telemetry":{"events_complete":true},
+  "events":[
+    {"type":"USER","text":"เริ่มเก็บ requirement ได้เลย"},
+    {"type":"STATE_WRITE","target":".ba/phases/01-understand/R001.md","operation":"CREATE"},
+    {"type":"ASSISTANT","text":"ผมสร้าง approved snapshot แล้ว"}
+  ]
+}

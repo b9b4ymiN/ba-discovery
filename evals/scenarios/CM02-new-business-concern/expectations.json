@@ -1,0 +1,25 @@
+{
+  "scenario_id": "CM02-new-business-concern",
+  "expectations": [
+    {
+      "criterion": "CHG-01",
+      "level": "must-pass",
+      "check": "event_present",
+      "params": {
+        "type": "INSPECT",
+        "target_contains": ".ba/changes/CHG-0001.md"
+      },
+      "semantic_review": false
+    },
+    {
+      "criterion": "CHG-04",
+      "level": "must-pass",
+      "check": "event_present",
+      "params": {
+        "type": "STATE_WRITE",
+        "target_contains": ".ba/changes/CHG-0002.md"
+      },
+      "semantic_review": false
+    }
+  ]
+}

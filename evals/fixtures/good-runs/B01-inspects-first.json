@@ -1,0 +1,8 @@
+{
+  "scenario_id":"B01-brownfield-source-gate","runtime":"fixture","telemetry":{"events_complete":true},
+  "events":[
+    {"type":"USER","text":"ช่วยทำ BA ต่อจากระบบเดิมให้หน่อย"},
+    {"type":"INSPECT","target":"docs/current-workflow.md"},
+    {"type":"ASSISTANT","text":"ผมเห็นจากเอกสารเดิมแล้วว่าระบบหลักเก็บข้อมูลคำสั่งผลิตอยู่ที่ ERP ตอนนี้ขอถามเฉพาะเรื่อง policy: Planner มีสิทธิ์ override แผนทุกกรณีไหม?"}
+  ]
+}

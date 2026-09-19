@@ -1,0 +1,13 @@
+{
+  "scenario_id": "CM05-minimum-revalidation",
+  "runtime": "fixture",
+  "telemetry": {
+    "events_complete": true
+  },
+  "events": [
+    {
+      "type": "ASSISTANT",
+      "text": "Let us restart requirements and reconfirm every MOQ-related item."
+    }
+  ]
+}

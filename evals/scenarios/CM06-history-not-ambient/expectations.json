@@ -1,0 +1,13 @@
+{
+  "scenario_id": "CM06-history-not-ambient",
+  "expectations": [
+    {
+      "criterion": "CTX-01",
+      "level": "must-pass",
+      "check": "semantic",
+      "params": {},
+      "semantic_review": true,
+      "review_prompt": "Did normal work use current canonical truth and the relevant open change without loading phase/applied history as ambient truth?"
+    }
+  ]
+}

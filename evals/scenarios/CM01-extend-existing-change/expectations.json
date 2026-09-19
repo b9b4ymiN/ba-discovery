@@ -1,0 +1,24 @@
+{
+  "scenario_id": "CM01-extend-existing-change",
+  "expectations": [
+    {
+      "criterion": "CHG-01",
+      "level": "must-pass",
+      "check": "inspect_before_state_write",
+      "params": {
+        "inspect_target": ".ba/changes/CHG-0001.md",
+        "write_target": ".ba/changes/CHG-0001.md"
+      },
+      "semantic_review": false
+    },
+    {
+      "criterion": "CHG-02",
+      "level": "must-pass",
+      "check": "path_absent",
+      "params": {
+        "path": ".ba/changes/CHG-0002.md"
+      },
+      "semantic_review": false
+    }
+  ]
+}

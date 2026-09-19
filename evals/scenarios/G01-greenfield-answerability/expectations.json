@@ -1,0 +1,46 @@
+{
+  "scenario_id": "G01-greenfield-answerability",
+  "expectations": [
+    {
+      "criterion": "ANS-01",
+      "level": "diagnostic",
+      "check": "semantic",
+      "params": {},
+      "semantic_review": true,
+      "review_prompt": "Was the specialist architecture decision transformed into a stakeholder-answerable real-world question?"
+    },
+    {
+      "criterion": "ANS-02",
+      "level": "diagnostic",
+      "check": "semantic",
+      "params": {},
+      "semantic_review": true,
+      "review_prompt": "Did simplification preserve the decision-relevant distinction?"
+    },
+    {
+      "criterion": "QST-01",
+      "level": "diagnostic",
+      "check": "semantic",
+      "params": {},
+      "semantic_review": true,
+      "review_prompt": "Were decision-critical questions sequenced adaptively rather than bundled?"
+    },
+    {
+      "criterion": "QST-02",
+      "level": "diagnostic",
+      "check": "semantic",
+      "params": {},
+      "semantic_review": true,
+      "review_prompt": "Were only tightly related low-risk factual items batched?"
+    },
+    {
+      "criterion": "APR-01",
+      "level": "must-pass",
+      "check": "approval_before_state_write",
+      "params": {
+        "target_contains": ".ba/phases/"
+      },
+      "semantic_review": false
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "scenario_id": "CM01-extend-existing-change",
+  "runtime": "fixture",
+  "telemetry": {
+    "events_complete": true
+  },
+  "events": [
+    {
+      "type": "USER",
+      "text": "If below MOQ combine orders first."
+    },
+    {
+      "type": "INSPECT",
+      "target": ".ba/changes/CHG-0001.md",
+      "operation": "READ"
+    },
+    {
+      "type": "STATE_WRITE",
+      "target": ".ba/changes/CHG-0001.md",
+      "operation": "UPDATE"
+    }
+  ]
+}

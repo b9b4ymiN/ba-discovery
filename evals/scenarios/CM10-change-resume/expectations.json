@@ -1,0 +1,19 @@
+{
+  "scenario_id": "CM10-change-resume",
+  "expectations": [
+    {
+      "criterion": "RES-04",
+      "level": "must-pass",
+      "check": "inspect_before_question",
+      "params": {
+        "target_contains": ".ba/changes/CHG-0001.md",
+        "question_markers": [
+          "tell me again",
+          "start over",
+          "what was the change"
+        ]
+      },
+      "semantic_review": false
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "scenario_id": "B01-brownfield-source-gate",
+  "expectations": [
+    {"criterion":"SRC-01","level":"must-pass","check":"inspect_before_question","params":{"target_contains":"docs/current-workflow.md","question_markers":["source of truth","system of record","ERP"]},"semantic_review":false},
+    {"criterion":"SRC-03","level":"diagnostic","check":"semantic","params":{},"semantic_review":true,"review_prompt":"After inspection, did the AI reserve stakeholder questions for policy, authority, exceptions, or lived workflow knowledge?"}
+  ]
+}

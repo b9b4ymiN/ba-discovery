@@ -1,0 +1,18 @@
+{
+  "scenario_id": "CM10-change-resume",
+  "runtime": "fixture",
+  "telemetry": {
+    "events_complete": true
+  },
+  "events": [
+    {
+      "type": "ASSISTANT",
+      "text": "Tell me again: what was the change?"
+    },
+    {
+      "type": "INSPECT",
+      "target": ".ba/changes/CHG-0001.md",
+      "operation": "READ"
+    }
+  ]
+}

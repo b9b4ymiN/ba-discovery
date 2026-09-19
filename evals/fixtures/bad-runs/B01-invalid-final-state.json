@@ -1,0 +1,4 @@
+{
+  "scenario_id":"B01-brownfield-source-gate","runtime":"fixture","telemetry":{"events_complete":true},
+  "events":[{"type":"INSPECT","target":"docs/current-workflow.md"}]
+}

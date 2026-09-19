@@ -1,0 +1,29 @@
+{
+  "scenario_id": "CM09-post-commit-verification",
+  "runtime": "fixture",
+  "telemetry": {
+    "events_complete": true
+  },
+  "events": [
+    {
+      "type": "APPROVAL",
+      "scope": "FINAL",
+      "text": "approve"
+    },
+    {
+      "type": "STATE_WRITE",
+      "target": ".ba/DECISIONS.md",
+      "operation": "UPDATE"
+    },
+    {
+      "type": "INSPECT",
+      "target": ".ba/DECISIONS.md",
+      "operation": "READBACK"
+    },
+    {
+      "type": "STATE_WRITE",
+      "target": ".ba/changes/CHG-0001.md",
+      "operation": "UPDATE"
+    }
+  ]
+}

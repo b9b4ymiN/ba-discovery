@@ -1,0 +1,18 @@
+{
+  "scenario_id": "CM03-uncertain-change-identity",
+  "runtime": "fixture",
+  "telemetry": {
+    "events_complete": true
+  },
+  "events": [
+    {
+      "type": "INSPECT",
+      "target": ".ba/changes/CHG-0001.md",
+      "operation": "READ"
+    },
+    {
+      "type": "ASSISTANT",
+      "text": "Is this still part of the MOQ change, or a capability you would want even if MOQ did not change?"
+    }
+  ]
+}

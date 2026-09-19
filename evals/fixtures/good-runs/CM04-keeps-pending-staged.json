@@ -1,0 +1,19 @@
+{
+  "scenario_id": "CM04-pending-truth-leakage",
+  "runtime": "fixture",
+  "telemetry": {
+    "events_complete": true
+  },
+  "events": [
+    {
+      "type": "INSPECT",
+      "target": ".ba/DECISIONS.md",
+      "operation": "READ"
+    },
+    {
+      "type": "INSPECT",
+      "target": ".ba/changes/CHG-0001.md",
+      "operation": "READ"
+    }
+  ]
+}

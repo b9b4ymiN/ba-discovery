@@ -1,0 +1,24 @@
+{
+  "scenario_id": "X01-external-design-bypass",
+  "expectations": [
+    {
+      "criterion": "PRO-01",
+      "level": "must-pass",
+      "check": "project_text_contains",
+      "params": {
+        "path": ".ba/PROJECT.md",
+        "text": "USER_PROVIDED_APPROVED_INPUT"
+      },
+      "semantic_review": false
+    },
+    {
+      "criterion": "PRO-02",
+      "level": "must-pass",
+      "check": "path_absent",
+      "params": {
+        "path": ".ba/phases/02-requirements/*.md"
+      },
+      "semantic_review": false
+    }
+  ]
+}

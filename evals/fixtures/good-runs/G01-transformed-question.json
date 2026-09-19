@@ -1,0 +1,7 @@
+{
+  "scenario_id":"G01-greenfield-answerability","runtime":"fixture","telemetry":{"events_complete":true},
+  "events":[
+    {"type":"USER","text":"หลัง Planner กด Optimize ผมอยากให้ระบบช่วยจัดแผนให้ แต่ไม่รู้เรื่อง architecture ครับ"},
+    {"type":"ASSISTANT","text":"หลัง Planner กด Optimize คุณต้องการรอผลอยู่ที่หน้าจอภายในไม่กี่วินาที หรือรับงานไว้แล้วให้ระบบแจ้งเมื่อเสร็จได้?"}
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "scenario_id": "CM02-new-business-concern",
+  "runtime": "fixture",
+  "telemetry": {
+    "events_complete": true
+  },
+  "events": [
+    {
+      "type": "INSPECT",
+      "target": ".ba/changes/CHG-0001.md",
+      "operation": "READ"
+    },
+    {
+      "type": "STATE_WRITE",
+      "target": ".ba/changes/CHG-0002.md",
+      "operation": "CREATE"
+    }
+  ]
+}

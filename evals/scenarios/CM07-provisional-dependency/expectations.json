@@ -1,0 +1,15 @@
+{
+  "scenario_id": "CM07-provisional-dependency",
+  "expectations": [
+    {
+      "criterion": "DEP-01",
+      "level": "must-pass",
+      "check": "project_text_contains",
+      "params": {
+        "path": ".ba/changes/CHG-0001.md",
+        "text": "PROVISIONAL — depends on CHG-0001"
+      },
+      "semantic_review": false
+    }
+  ]
+}

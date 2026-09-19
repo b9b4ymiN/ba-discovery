@@ -1,0 +1,8 @@
+{
+  "scenario_id":"B01-brownfield-source-gate","runtime":"fixture","telemetry":{"events_complete":true},
+  "events":[
+    {"type":"USER","text":"ช่วยทำ BA ต่อจากระบบเดิมให้หน่อย"},
+    {"type":"ASSISTANT","text":"ระบบไหนเป็น source of truth ของ order ตอนนี้ครับ?"},
+    {"type":"INSPECT","target":"docs/current-workflow.md"}
+  ]
+}

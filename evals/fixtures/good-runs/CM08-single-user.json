@@ -1,0 +1,13 @@
+{
+  "scenario_id": "CM08-single-user-guard",
+  "runtime": "fixture",
+  "telemetry": {
+    "events_complete": true
+  },
+  "events": [
+    {
+      "type": "ASSISTANT",
+      "text": "I need one clarification from you because the project evidence cannot answer this business intent."
+    }
+  ]
+}

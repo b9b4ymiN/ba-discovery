@@ -1,0 +1,74 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "BA Discovery normalized run record",
+  "type": "object",
+  "required": [
+    "scenario_id",
+    "runtime",
+    "events"
+  ],
+  "properties": {
+    "scenario_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "runtime": {
+      "type": "string",
+      "minLength": 1
+    },
+    "model": {
+      "type": "string"
+    },
+    "telemetry": {
+      "type": "object",
+      "properties": {
+        "events_complete": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": true
+    },
+    "events": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "type"
+        ],
+        "properties": {
+          "type": {
+            "enum": [
+              "USER",
+              "ASSISTANT",
+              "INSPECT",
+              "RESEARCH",
+              "STATE_WRITE",
+              "APPROVAL"
+            ]
+          },
+          "text": {
+            "type": "string"
+          },
+          "target": {
+            "type": "string"
+          },
+          "operation": {
+            "type": "string"
+          },
+          "scope": {
+            "enum": [
+              "PHASE",
+              "IMPACT",
+              "FINAL"
+            ]
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "final_project_dir": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

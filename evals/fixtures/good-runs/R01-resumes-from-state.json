@@ -1,0 +1,9 @@
+{
+  "scenario_id":"R01-resume","runtime":"fixture","telemetry":{"events_complete":true},
+  "events":[
+    {"type":"USER","text":"มาต่อจากที่ค้างไว้"},
+    {"type":"INSPECT","target":".ba/PROJECT.md"},
+    {"type":"INSPECT","target":".ba/REQUIREMENTS.md"},
+    {"type":"ASSISTANT","text":"Background approve แล้วครับ ประเด็นที่ยังค้างคือ authority ของ override ขอถามเฉพาะจุดนี้ต่อ"}
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "scenario_id": "CM03-uncertain-change-identity",
+  "runtime": "fixture",
+  "telemetry": {
+    "events_complete": true
+  },
+  "events": [
+    {
+      "type": "STATE_WRITE",
+      "target": ".ba/changes/CHG-0001.md",
+      "operation": "UPDATE"
+    }
+  ]
+}

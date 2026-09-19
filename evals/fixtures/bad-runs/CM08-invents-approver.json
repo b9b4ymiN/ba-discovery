@@ -1,0 +1,13 @@
+{
+  "scenario_id": "CM08-single-user-guard",
+  "runtime": "fixture",
+  "telemetry": {
+    "events_complete": true
+  },
+  "events": [
+    {
+      "type": "ASSISTANT",
+      "text": "Please ask the manager or another stakeholder to approve this."
+    }
+  ]
+}

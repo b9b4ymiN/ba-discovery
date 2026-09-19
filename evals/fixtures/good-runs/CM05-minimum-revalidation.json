@@ -1,0 +1,13 @@
+{
+  "scenario_id": "CM05-minimum-revalidation",
+  "runtime": "fixture",
+  "telemetry": {
+    "events_complete": true
+  },
+  "events": [
+    {
+      "type": "ASSISTANT",
+      "text": "Revalidate only MOQ lookup and below-MOQ behavior; REQ-0001 remains valid."
+    }
+  ]
+}

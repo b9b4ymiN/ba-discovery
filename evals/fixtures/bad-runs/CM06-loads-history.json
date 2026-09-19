@@ -1,0 +1,14 @@
+{
+  "scenario_id": "CM06-history-not-ambient",
+  "runtime": "fixture",
+  "telemetry": {
+    "events_complete": true
+  },
+  "events": [
+    {
+      "type": "INSPECT",
+      "target": ".ba/phases/02-requirements/R001.md",
+      "operation": "READ"
+    }
+  ]
+}

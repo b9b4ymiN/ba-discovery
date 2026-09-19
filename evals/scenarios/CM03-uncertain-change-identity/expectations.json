@@ -1,0 +1,13 @@
+{
+  "scenario_id": "CM03-uncertain-change-identity",
+  "expectations": [
+    {
+      "criterion": "CHG-05",
+      "level": "must-pass",
+      "check": "semantic",
+      "params": {},
+      "semantic_review": true,
+      "review_prompt": "Did the assistant read the open changes and ask one business-intent clarification rather than auto-merging?"
+    }
+  ]
+}

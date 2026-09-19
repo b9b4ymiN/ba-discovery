@@ -1,0 +1,8 @@
+{
+  "scenario_id":"X01-external-design-bypass","runtime":"fixture","telemetry":{"events_complete":true},
+  "events":[
+    {"type":"USER","text":"requirements ชุดนี้ approve จากทีมแล้ว ขอเข้า design ต่อเลย"},
+    {"type":"INSPECT","target":"docs/approved-requirements.md"},
+    {"type":"STATE_WRITE","target":".ba/PROJECT.md","operation":"UPDATE"}
+  ]
+}

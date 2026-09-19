@@ -1,0 +1,34 @@
+{
+  "scenario_id": "CM09-post-commit-verification",
+  "expectations": [
+    {
+      "criterion": "CMT-01",
+      "level": "must-pass",
+      "check": "approval_scope_before_state_write",
+      "params": {
+        "scope": "FINAL",
+        "target_contains": ".ba/DECISIONS.md"
+      },
+      "semantic_review": false
+    },
+    {
+      "criterion": "CMT-02",
+      "level": "must-pass",
+      "check": "inspect_after_state_write",
+      "params": {
+        "target_contains": ".ba/DECISIONS.md"
+      },
+      "semantic_review": false
+    },
+    {
+      "criterion": "CHG-03",
+      "level": "must-pass",
+      "check": "change_status",
+      "params": {
+        "change_id": "CHG-0001",
+        "status": "APPLIED"
+      },
+      "semantic_review": false
+    }
+  ]
+}
