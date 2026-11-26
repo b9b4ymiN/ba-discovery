@@ -36,7 +36,7 @@ Open docs/BA-Workspace.html directly. The output contains embedded JS, CSS, lice
 
 ## Verification before merge
 
-- Run python -m unittest discover -s tests and python tests/validate_repo.py.
+- Run python -m pytest tests/ -q and python tests/validate_repo.py (the repo's documented regression commands). The Visual foundation workflow also runs tests/visual_browser_smoke.py using a real pinned Pele package and headless Chromium; a green run is required before merging this increment. Safari/iOS and Firefox remain manual verification.
 - Prepare the actual pinned bundle, generate from existing example projects, test all five P0 diagram types and malformed syntax with Chrome/Edge, Firefox and Safari/iOS where available.
 - Confirm offline file:// operation, zero network traffic, readable Thai labels, SVG styling, source error fallback, injection payloads, source freshness and preservation of .ba/ bytes.
 - Ensure the minified bundle is safe to embed (script delimiter guard must pass); test CSP hash enforcement and rendering with actual library.

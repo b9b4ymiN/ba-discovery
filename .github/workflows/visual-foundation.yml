@@ -1,0 +1,36 @@
+name: Visual foundation
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [feat/visual-discovery-foundation]
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: visual-foundation-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install test tools
+        run: python -m pip install pytest==8.3.5 playwright==1.51.0
+      - name: Repository regression
+        run: |
+          python tests/validate_repo.py
+          python -m pytest tests/ -q
+      - name: Prepare pinned renderer
+        run: npm install --prefix assets/visual --ignore-scripts --no-audit --no-fund
+      - name: Install Chromium
+        run: python -m playwright install --with-deps chromium
+      - name: Real offline browser smoke test
+        run: python tests/visual_browser_smoke.py
