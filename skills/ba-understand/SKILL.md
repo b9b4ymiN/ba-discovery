@@ -78,6 +78,10 @@ Load only when useful:
 
 Update Project Brain only for material shared truth. Keep evidence, assumptions, inference, and user statements distinguishable. If the user pauses, preserve safe state, current activity, and Next Focus, then stop.
 
+## Visual on Value (optional, not a gate)
+
+When a visual would materially improve a question, decision or review, read `${CLAUDE_PLUGIN_ROOT}/shared/contract-visuals.md` and follow its selection and evidence rules. Prefer AS-IS workflow and ownership when clarifying current reality; keep future solutions provisional. Use the same derived workspace across phases; check freshness on resume only when reusing a visual. Rendering limitations must not interrupt BA or change approval behavior. Do not generate visuals for routine questions.
+
 ## Exit
 
 When background/problem understanding is sufficient:

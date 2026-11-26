@@ -109,3 +109,12 @@ Every finding should map to one of: `SOURCE_ROUTING`, `ANSWERABILITY`, `QUESTION
 | ID | Level | Behavior |
 |---|---|---|
 | `RES-04` | must-pass where specified | Resume an open change from durable state without re-bootstrap. |
+
+## Visual discovery (Phase 02)
+
+| ID | Level | Behavior |
+|---|---|---|
+| VIS-01 | must-pass where specified | Select a representation that answers the actual decision; avoid unnecessary workspace creation. |
+| VIS-02 | diagnostic / semantic review | Preserve evidence status, unknowns, semantic fidelity, scoped approval and the smallest useful level. |
+
+Capture observable ASSISTANT events with operation visual_selection and visual_kind from the actual produced view (or text), plus actual STATE_WRITE targets; never manufacture observations from a proposed plan. Complete action telemetry is required. The deterministic evaluator tests selection and file activity, not the correctness of diagram contents; reviewers inspect transcript and actual artifact separately.

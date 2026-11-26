@@ -1,0 +1,22 @@
+{
+  "scenario_id": "V01-simple-question",
+  "expectations": [
+    {
+      "criterion": "VIS-01",
+      "level": "must-pass",
+      "check": "visual_selection",
+      "params": {
+        "kind": "text"
+      },
+      "semantic_review": false
+    },
+    {
+      "criterion": "VIS-02",
+      "level": "diagnostic",
+      "check": "semantic",
+      "params": {},
+      "semantic_review": true,
+      "review_prompt": "Does the actual artifact preserve evidence, uncertainty, approval scope and appropriate detail?"
+    }
+  ]
+}
