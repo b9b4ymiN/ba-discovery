@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="ba-visual-format" content="1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src {{SCRIPT_HASHES}}; style-src 'unsafe-inline'; img-src data:; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<title>BA Discovery — Visual Workspace</title>
+<style>
+:root{color-scheme:light;--ink:#17202a;--muted:#596779;--line:#d9e0e7;--accent:#243b53;--paper:#fff;--soft:#f4f6f9}
+*{box-sizing:border-box}body{margin:0;background:var(--soft);color:var(--ink);font:16px/1.6 system-ui,sans-serif}
+main{max-width:1100px;margin:auto;padding:32px 20px}header{border-bottom:2px solid var(--accent);margin-bottom:24px;padding-bottom:16px}h1,h2,h3{line-height:1.25;overflow-wrap:anywhere}h1{font-size:clamp(1.6rem,4vw,2.2rem)}h2{font-size:1.2rem}p,li{white-space:pre-wrap;overflow-wrap:anywhere}
+.eyebrow{font-size:.76rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:700}.notice{border-left:3px solid #8a611e;padding:12px 16px;background:#fff8ec}.card{padding:20px;margin:16px 0;background:var(--paper);border:1px solid var(--line);border-radius:10px}.meta{color:var(--muted);font-size:.85rem;overflow-wrap:anywhere}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:var(--soft);padding:12px}img{display:block;max-width:100%;height:auto;margin:12px auto}.error{color:#8b2525}details{margin-top:12px}summary{cursor:pointer}code{overflow-wrap:anywhere}
+@media print{body{background:white}main{padding:0}header,.card{break-inside:avoid}img{max-height:650px}}
+</style>
+</head>
+<body>
+<main>
+<header><div class="eyebrow">BA Discovery · Visual Foundation</div><h1 id="title">Visual Workspace</h1><div class="notice">DRAFT / NOT AN APPROVAL — generated snapshot. Verify source freshness before reuse.</div><p id="summary"></p><div id="meta" class="meta"></div></header>
+<noscript><p>JavaScript is disabled. The embedded diagram sources remain in the file.</p></noscript>
+<section id="diagrams" aria-label="Diagrams"></section>
+<section class="card"><h2>Source references</h2><ul id="sources"></ul></section>
+<details><summary>Third-party license — Pele</summary><pre>{{LICENSE}}</pre></details>
+</main>
+<script id="ba-data" type="application/json">{{DATA}}</script>
+<script>{{PELE}}</script>
+<script>{{WORKSPACE_JS}}</script>
+</body>
+</html>

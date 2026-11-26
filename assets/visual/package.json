@@ -1,0 +1,9 @@
+{
+  "name": "ba-discovery-visual-assets",
+  "private": true,
+  "version": "0.0.0",
+  "description": "Pinned offline rendering dependency; preparation only",
+  "dependencies": {
+    "pele": "1.7.0"
+  }
+}
