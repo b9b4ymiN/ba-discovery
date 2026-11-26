@@ -67,6 +67,10 @@ Load only when useful:
 - [references/system-boundaries.md](references/system-boundaries.md)
 - [references/tradeoff-analysis.md](references/tradeoff-analysis.md)
 
+## Visual on Value (optional, not a gate)
+
+When a visual would materially improve a question, decision or review, read `${CLAUDE_PLUGIN_ROOT}/shared/contract-visuals.md` and follow its selection and evidence rules. Choose boundaries, interactions, data relationships or lifecycle according to the decision. Do not infer cardinality, interfaces or authority from a diagram. Use the same derived workspace across phases; check freshness on resume only when reusing a visual. Rendering limitations must not interrupt BA or change approval behavior. Do not generate visuals for routine questions.
+
 ## Exit
 
 Summarize design, traceability, material decisions, risks, open choices, and any bypass provenance. Ask for explicit **System Design** approval.

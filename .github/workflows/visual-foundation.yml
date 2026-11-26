@@ -35,3 +35,12 @@ jobs:
         run: python -m playwright install --with-deps chromium
       - name: Real offline browser smoke test
         run: python tests/visual_browser_smoke.py
+      - name: Verified renderer preparation artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: pele-1.7.0-verification
+          path: |
+            assets/visual/package-lock.json
+            assets/visual/node_modules/pele/dist/pele.global.js
+            assets/visual/node_modules/pele/LICENSE
+          if-no-files-found: error

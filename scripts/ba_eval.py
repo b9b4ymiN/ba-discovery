@@ -313,7 +313,23 @@ def _check_inspect_after_state_write(item: dict[str, Any], run: dict[str, Any], 
     return _result(criterion, "PASS", [f"Readback INSPECT occurred at event {inspect}."])
 
 
+def _check_visual_selection(item, run, project):
+    criterion = item["criterion"]
+    if not _events_complete(run):
+        return _result(criterion, "NOT_OBSERVED", notes="Complete captured action telemetry required.")
+    expected = item["params"]["kind"]
+    selected = [event for event in run["events"] if event["type"] == "ASSISTANT" and event.get("operation") == "visual_selection"]
+    writes = [event for event in run["events"] if event["type"] == "STATE_WRITE" and str(event.get("target", "")).replace(chr(92), "/").endswith("docs/BA-Workspace.html")]
+    if expected == "text":
+        valid = not writes and all(event.get("visual_kind") == "text" for event in selected)
+    else:
+        valid = bool(selected and writes) and selected[-1].get("visual_kind") == expected
+    return _result(criterion, "PASS" if valid else "FAIL",
+                   [f"Expected {expected}; observed selections {len(selected)}, workspace writes {len(writes)}."])
+
+
 CHECKS = {
+    "visual_selection": _check_visual_selection,
     "inspect_before_question": _check_inspect_before_question,
     "project_text_contains": _check_project_text_contains,
     "path_absent": _check_path_absent,

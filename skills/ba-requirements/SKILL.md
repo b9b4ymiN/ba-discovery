@@ -70,6 +70,10 @@ Separate NEED, REQUIREMENT, and CONSTRAINT. Trace material statements to origin/
 
 Persist canonical records following the shared contract. If the user pauses, preserve exact current activity and Next Focus, then stop.
 
+## Visual on Value (optional, not a gate)
+
+When a visual would materially improve a question, decision or review, read `${CLAUDE_PLUGIN_ROOT}/shared/contract-visuals.md` and follow its selection and evidence rules. Prefer candidate scenarios, decision tables, comparison and TO-BE flow; do not finalize detailed architecture here. Use the same derived workspace across phases; check freshness on resume only when reusing a visual. Rendering limitations must not interrupt BA or change approval behavior. Do not generate visuals for routine questions.
+
 ## Exit
 
 Before approval, perform a quiet coverage sweep and summarize confirmed needs/requirements/constraints, material decisions, open items, risks, out-of-scope, and **Design Drivers** with supporting REQ/DEC IDs.

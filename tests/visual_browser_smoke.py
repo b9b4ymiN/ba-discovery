@@ -76,6 +76,54 @@ def main():
             assert cards.last.locator("pre").text_content() == samples[-1][1]
             assert not errors, errors
             assert not remote, remote
+            # V2: one workspace with real diagram, focused native table, safe text, and incremental update.
+            evidence = project / "docs" / "workflow.md"
+            evidence.write_text("Observed order process", encoding="utf-8")
+            flow = {
+                "visual_id": "order-flow", "title": "Order flow",
+                "question": "How does the order move?", "intent": "process",
+                "kind": "flowchart", "selection_reason": "Actions in order",
+                "status": "OBSERVED", "level": "L0",
+                "source_paths": ["docs/workflow.md"], "references": ["workflow.md"],
+                "source": "flowchart LR\nA[Order] --> B[Check]"
+            }
+            rules = {
+                "visual_id": "shortage-rules", "title": "Shortage rule",
+                "question": "What happens on shortage?", "intent": "condition",
+                "kind": "decision_table", "selection_reason": "Conditions and outcomes",
+                "status": "PROPOSED", "level": "L1",
+                "source_paths": [".ba/PROJECT.md"], "references": [],
+                "columns": ["Condition", "Outcome"],
+                "rows": [["Shortage", "<script>window.injected=true</script>"]],
+                "open_questions": ["Which rule should be approved?"]
+            }
+            v2 = {"schema_version": 2, "title": "Visual review", "phase": "REQUIREMENTS",
+                  "focus_id": "shortage-rules", "visuals": [flow, rules]}
+            input_file.write_text(json.dumps(v2), encoding="utf-8")
+            run("--project", project, "--input", input_file)
+            run("--project", project, "--check")
+            page.goto(workspace.as_uri(), wait_until="load")
+            assert page.locator("#focus").inner_text() == "Current focus: What happens on shortage?"
+            assert page.get_by_role("button", name="Rules").get_attribute("aria-pressed") == "true"
+            assert page.locator("table td").last.inner_text() == "<script>window.injected=true</script>"
+            assert page.evaluate("window.injected === undefined")
+            page.get_by_role("button", name="Process").click()
+            assert page.locator("#diagrams article").first.is_visible()
+            assert page.locator("#diagrams article").first.locator("img").evaluate(
+                "(img) => img.complete && img.naturalWidth > 0")
+            # Old evidence must not become fresh merely because another view is updated.
+            evidence.write_text("Changed order process", encoding="utf-8")
+            rules["rows"] = [["Shortage", "Open decision"]]
+            v2["visuals"] = [rules]
+            input_file.write_text(json.dumps(v2), encoding="utf-8")
+            run("--project", project, "--input", input_file, "--update")
+            run("--project", project, "--check", expected=1)
+            page.goto(workspace.as_uri(), wait_until="load")
+            assert page.locator("#diagrams article").count() == 2
+            page.get_by_role("button", name="Process").click()
+            assert "STALE" in page.locator("#diagrams article").first.inner_text()
+            assert not errors, errors
+            assert not remote, remote
             browser.close()
         assert snapshot(brain) == before
         record = brain / "PROJECT.md"

@@ -1,0 +1,58 @@
+{
+  "explain": {
+    "kind": "text",
+    "tab": null
+  },
+  "process": {
+    "kind": "flowchart",
+    "tab": "Process"
+  },
+  "responsibility": {
+    "kind": "swimlane",
+    "tab": "Process"
+  },
+  "interaction": {
+    "kind": "sequence",
+    "tab": "System"
+  },
+  "boundary": {
+    "kind": "architecture",
+    "tab": "System"
+  },
+  "relationship": {
+    "kind": "erd",
+    "tab": "Data"
+  },
+  "lifecycle": {
+    "kind": "state",
+    "tab": "Process"
+  },
+  "condition": {
+    "kind": "decision_table",
+    "tab": "Rules"
+  },
+  "alternatives": {
+    "kind": "comparison",
+    "tab": "Rules"
+  },
+  "current_future": {
+    "kind": "before_after",
+    "tab": "Process"
+  },
+  "cause": {
+    "kind": "cause_map",
+    "tab": "Process"
+  },
+  "impact": {
+    "kind": "impact_graph",
+    "tab": "System"
+  },
+  "coverage": {
+    "kind": "traceability",
+    "tab": "Review"
+  },
+  "screen": {
+    "kind": "wireframe",
+    "tab": null
+  }
+}
